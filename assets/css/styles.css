@@ -222,7 +222,10 @@ img {
 }
 
 /* Change background header */
-
+.scroll-header {
+  box-shadow: 0 4px 4px hsla(0, 0%, 4%, .3);
+  transition: .2s linear;
+}
 
 /*=============== HOME ===============*/
 .home__container {
@@ -303,6 +306,7 @@ img {
   font-size: 1rem;
   transition: .3s linear;
 }
+
 .home__social-link:hover {
   background-color: var(--first-color);
   color: #fff;
@@ -324,6 +328,7 @@ img {
   row-gap: 2.25rem;
   justify-items: center;
 }
+
 .home__scroll-icon {
   font-size: 1.25rem;
 }
@@ -332,6 +337,7 @@ img {
   font-size: var(--smaller-font-size);
   transform: rotate(-90deg);
 }
+
 /*=============== BUTTONS ===============*/
 .button {
   display: inline-block;
@@ -342,16 +348,63 @@ img {
   font-weight: var(--font-medium);
   transition: .3s linear;
 }
+
 .button:hover {
   background-color: var(--first-color-alt);
   color: var(--body-color);
 }
+
 .button--ghost {
   background-color: transparent;
   border: 2px solid var(--first-color);
+  color: var(--first-color);
 }
-/*=============== ABOUT ===============*/
 
+/*=============== ABOUT ===============*/
+.about__container {
+  row-gap: 2.5rem
+}
+
+.about__img {
+  width: 220px;
+  border-radius: 1.5rem;
+  justify-self: center;
+}
+
+.about__data {
+  text-align: center;
+}
+
+.about__info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: .5rem;
+  margin-bottom: 2rem;
+}
+
+.about__box {
+  background-color: var(--container-color);
+  border-radius: .75rem;
+  padding: .75rem .5rem;
+}
+
+.about__icon {
+  font-size: 1.5rem;
+  color: var(--first-color);
+  margin-bottom: 0.5rem;
+}
+
+.about__title {
+  font-size: var(--small-font-size);
+}
+
+.about__subtitle {
+  font-size: var(--tiny-font-size);
+}
+
+.about__description {
+  margin-bottom: 2rem;
+}
 
 /*=============== SKILLS ===============*/
 
