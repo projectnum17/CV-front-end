@@ -32,13 +32,55 @@ modalClose.forEach((mc) => {
     })
 })
 /*=============== MIXITUP FILTER PORTFOLIO ===============*/
-
+let mixerPortfolio = mixitup('.work__container', {
+    selectors: {
+        target: '.work__card'
+    },
+    animation: {
+        duration: 400,
+        effectsIn: 'fade translateY(-100%)'
+    }
+});
 
 /* Link active work */
+const linkWork = document.querySelectorAll('.work__item')
 
+function activeWork() {
+    linkWork.forEach(l => l.classList.remove('active-work'))
+    this.classList.add('active-work')
+}
 
+linkWork.forEach(l => l.addEventListener('click', activeWork));
 /*=============== SWIPER TESTIMONIAL ===============*/
+let swiperTest = new Swiper('.testimonial__container', {
+    spaceBetween: 24,
+    loop: true,
+    grabCursor: true,
 
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+
+    breakpoints: {
+        576: {
+            slidesPerView: 1,
+        },
+        768: {
+            slidesPerView: 1,
+            spaceBetween: 48,
+        },
+    }
+})
+
+//textarea
+var textarea = document.querySelector('textarea');
+
+textarea.addEventListener('keyup', function(){
+  if(this.scrollTop > 0){
+    this.style.height = this.scrollHeight + "px";
+  }
+});
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 
