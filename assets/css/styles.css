@@ -899,6 +899,7 @@ img {
 .contact__button:hover .contact__button-icon {
   transform: translateX(.25rem);
 }
+
 .contact__button-icon {
   font-size: 1rem;
   transition: .2s linear;
@@ -948,7 +949,7 @@ input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
-    -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
 }
 
 input:-webkit-autofill,
@@ -960,11 +961,11 @@ textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-    border: none;
-    border-bottom: 1px solid #A1A1AA;
-    -webkit-text-fill-color: #e4e4e7;
-    -webkit-box-shadow: 0 0 0px 1000px transparent inset;
-    transition: background-color 5000s ease-in-out 0s;
+  border: none;
+  border-bottom: 1px solid #A1A1AA;
+  -webkit-text-fill-color: #e4e4e7;
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+  transition: background-color 5000s ease-in-out 0s;
 }
 
 /*=============== FOOTER ===============*/
@@ -1017,7 +1018,20 @@ select:-webkit-autofill:focus {
 }
 
 /*=============== SCROLL BAR ===============*/
+::-webkit-scrollbar {
+  width: .6rem;
+  border-radius: .5rem;
+  background-color: hsl(var(--second-hue), 8%, 38%);
+}
 
+::-webkit-scrollbar-thumb {
+  background-color: hsl(var(--second-hue), 8%, 26%);
+  border-radius: .5rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(var(--second-hue), 8%, 20%);
+}
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
