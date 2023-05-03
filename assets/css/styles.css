@@ -842,12 +842,24 @@ body.light-theme {
 }
 
 .work__card {
+  display: flex;
+  flex-direction: column;
   background-color: var(--container-color);
   padding: 1rem;
   border-radius: 1rem;
 }
 
+.work__card-img {
+  max-width: 350px;
+  height: auto;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
 .work__img {
+  min-height: 366px;
+  width: 100%;
+  object-fit: cover;
   border-radius: 1rem;
   margin-bottom: 0.75rem;
 }
