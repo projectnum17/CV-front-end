@@ -1349,3 +1349,15 @@ select:-webkit-autofill:focus {
     border-radius: .5rem;
   }
 }
+
+@media screen and (max-width: 575px) {
+  .work__card-img {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .work__filters {
+    flex-direction: column;
+  }
+}
