@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }, 200);
 
     let progressElement = document.querySelector('progress');
-    let value = 100; // установите нужное значение
+    let value = 100;
     progressElement.setAttribute('value', value);
     progressElement.style.setProperty('--value', value);
 });
