@@ -1,3 +1,32 @@
+
+document.addEventListener("DOMContentLoaded", function (event) {
+    setTimeout(function () {
+        document.getElementById("preloader").style.opacity = "0";
+        document.getElementById("preloader").style.display = "none";
+        document.getElementById("main-content").classList.add("show");
+
+    }, 2000);
+    window.addEventListener('load', function () {
+        document.getElementById('my-audio').play();
+    });
+
+    const preloaderText = document.getElementById("preloader-text");
+    const text = preloaderText.innerText;
+    preloaderText.innerText = "";
+
+    let i = 0;
+    setInterval(() => {
+        if (i >= text.length) return;
+        preloaderText.innerText += text.charAt(i);
+        i++;
+    }, 200);
+
+    let progressElement = document.querySelector('progress');
+    let value = 100; // установите нужное значение
+    progressElement.setAttribute('value', value);
+    progressElement.style.setProperty('--value', value);
+});
+
 //change header
 const scrollHeader = () => {
     const header = document.getElementById('header')
@@ -145,3 +174,5 @@ const sr = ScrollReveal({
 sr.reveal(`.home__data`)
 sr.reveal(`.home__handle`, { delay: 700 })
 sr.reveal(`.home__social, home__scroll`, { delay: 900, origin: 'bottom' })
+
+

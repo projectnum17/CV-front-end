@@ -16,3 +16,218 @@ Gulp/Scss:
 
 Wordpress:
 - https://polezen.school/
+
+
+<audio id="myAudio">
+  <source src="path/to/my/music.mp3" type="audio/mpeg">
+</audio>
+<div class="preloader">
+  <div class="loader">
+    <div class="hand"></div>
+    <div class="text">Hello</div>
+    <div class="cursor"></div>
+  </div>
+</div>
+<div id="content" style="display:none;">
+  <!-- your content here -->
+</div>
+
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.hand {
+  background-image: url('https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/271/raising-hands_1f64c.png');
+  background-size: cover;
+  width: 60px;
+  height: 60px;
+  animation-name: wave;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  transform-origin: bottom center;
+}
+
+.text {
+  font-size: 24px;
+  margin-top: 20px;
+  width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  animation-name: typing;
+  animation-duration: 4s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+.cursor {
+  display: inline-block;
+  width: 8px;
+  height: 24px;
+  background-color: #000;
+  margin-left: 5px;
+  animation-name: blink;
+  animation-duration: 1s;
+  animation-timing-function: step-end;
+  animation-iteration-count: infinite;
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(20deg);
+  }
+  40% {
+    transform: rotate(0deg);
+  }
+  60% {
+    transform: rotate(20deg);
+  }
+  80% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(20deg);
+  }
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#content {
+  display: none;
+}
+
+
+// задержка показа основного контента в 5 секунд
+setTimeout(function() {
+  // показываем основной контент
+  document.getElementById('content').style.display = 'block';
+  // запускаем воспроиз
+
+  // запускаем воспроизведение музыки
+  var audio = document.getElementById("myAudio");
+  audio.play();
+}, 5000);
+
+
+body {
+  background-image: linear-gradient(to bottom right, #4B0082, #00FFFF);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+}
+
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+<div class="background">
+  <pre>
+    <code>
+      // Ваш код здесь
+    </code>
+  </pre>
+</div>
+
+
+
+
+
+.background {
+  background-color: #111;
+  color: #fff;
+  font-size: 18px;
+  padding: 20px;
+  white-space: pre-wrap;
+  line-height: 1.5;
+  overflow: hidden;
+}
+
+.background code {
+  display: block;
+  width: 100%;
+}
+
+.background code:before {
+  content: '';
+  display: inline-block;
+  vertical-align: bottom;
+  height: 100%;
+  width: 0;
+  margin-top: -2px;
+  animation: typing 5s steps(30) infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+
+const code = document.querySelector('.background code');
+const text = "// Ваш код здесь";
+let index = 0;
+
+function writeCode() {
+  code.textContent = text.slice(0, index);
+  index++;
+
+  if (index > text.length) {
+    index = 0;
+  }
+
+  setTimeout(writeCode, 100);
+}
+
+writeCode();
