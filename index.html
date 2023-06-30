@@ -70,8 +70,8 @@
 		<section class="home section" id="home">
 			<div class="home__container container grid">
 				<div class="home__data">
-					<span class="home__greeting">Hello I`m </span>
-					<h1 class="home__name">Yehor Chorniy</h1>
+					<span class="home__greeting" id="greeting">Hello I`m </span>
+					<h1 class="home__name" id="name">Yehor Chorniy</h1>
 					<h3 class="home__education">Front-end Developer</h3>
 
 					<div class="home__buttons">
@@ -132,9 +132,8 @@
 					</div>
 
 					<p class="about__description">
-						Frontend developer, I create web pages with UI / UX user
-						interface, I have years of experience and many clients are happy
-						with the projects carried out.
+						Frontend developer, I create web pages with UI/UX user interface, fully adaptive for mobile
+						devices using cross-browser layout 1+ years of experience both freelancing and in a company.
 					</p>
 
 					<a href="#contact" class="button">Contact Me</a>
@@ -157,7 +156,7 @@
 								<i class="bx bx-message-square-check"></i>
 
 								<div class="">
-									<h3 class="skills__name">HTML</h3>
+									<h3 class="skills__name">HTML5</h3>
 									<span class="skills__level">Experienced</span>
 								</div>
 							</div>
@@ -166,7 +165,7 @@
 								<i class="bx bx-message-square-check"></i>
 
 								<div class="">
-									<h3 class="skills__name">CSS</h3>
+									<h3 class="skills__name">CSS3</h3>
 									<span class="skills__level">Experienced</span>
 								</div>
 							</div>
@@ -184,8 +183,17 @@
 								<i class="bx bx-message-square-check"></i>
 
 								<div class="">
-									<h3 class="skills__name">Gulp</h3>
+									<h3 class="skills__name">Gulp/Webpack/Vite</h3>
 									<span class="skills__level">Experienced</span>
+								</div>
+							</div>
+
+							<div class="skills__data">
+								<i class="bx bx-message-square-check"></i>
+
+								<div class="">
+									<h3 class="skills__name">PHP, AJAX</h3>
+									<span class="skills__level">Intermediate</span>
 								</div>
 							</div>
 						</div>
@@ -204,7 +212,7 @@
 								<i class="bx bx-message-square-check"></i>
 
 								<div class="">
-									<h3 class="skills__name">React</h3>
+									<h3 class="skills__name">React.js</h3>
 									<span class="skills__level">Intermediate</span>
 								</div>
 							</div>
@@ -226,6 +234,15 @@
 									<span class="skills__level">Intermediate</span>
 								</div>
 							</div>
+
+							<div class="skills__data">
+								<i class="bx bx-message-square-check"></i>
+
+								<div class="">
+									<h3 class="skills__name">FTP</h3>
+									<span class="skills__level">Intermediate</span>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -234,10 +251,50 @@
 
 		<!--=============== SERVICES ===============-->
 		<section class="services section">
-			<span class="section__subtitle">Skills and Languages</span>
+			<span class="section__subtitle">Skills, Languages and Work Experience</span>
 			<h2 class="section__title">What I Offer</h2>
 
 			<div class="services__container container grid">
+
+
+				<div class="services__card">
+					<h3 class="services__title">
+						Work <br />
+						Experience
+					</h3>
+
+					<span class="services__button">
+						See more <i class="bx bx-right-arrow-alt services__icon"></i>
+					</span>
+
+					<div class="services__modal">
+						<div class="services__modal-content">
+							<i class="bx bx-x services__modal-close"></i>
+
+							<h3 class="services__modal-title">Work Experience</h3>
+							<p class="services__modal-description">
+								My own experience
+							</p>
+
+							<ul class="services__modal-list">
+								<li class="services__modal-item">
+									<i class="bx bx-check services__modal-icon"></i>
+									<p class="services__modal-info">Frontend Developer - WorkSet Co. (7 month)</p>
+								</li>
+
+								<li class="services__modal-item">
+									<i class="bx bx-check services__modal-icon"></i>
+									<p class="services__modal-info">
+										Freelance - (8 month - nowadays)
+									</p>
+								</li>
+
+							</ul>
+						</div>
+					</div>
+				</div>
+
+
 				<div class="services__card">
 					<h3 class="services__title">
 						Hard <br />
@@ -392,14 +449,12 @@
 
 			<div class="work__filters">
 				<span class="work__item active-work" data-filter="all">All</span>
-				<span class="work__item" data-filter=".html">HTML5/CSS3</span>
-				<span class="work__item" data-filter=".react">React</span>
-				<span class="work__item" data-filter=".gulp">Gulp/SCSS</span>
-				<span class="work__item" data-filter=".wordpress">WordPress</span>
+				<span class="work__item" data-filter=".commercial">Commercial Projects</span>
+				<span class="work__item" data-filter=".pet">Pet-Projects</span>
 			</div>
 
 			<div class="work__container container grid">
-				<div class="work__card mix react">
+				<div class="work__card mix commercial">
 					<div class="work__card-img">
 						<img src="assets/img/work-1.png" alt="Work" class="work__img" />
 					</div>
@@ -413,7 +468,7 @@
 					</div>
 				</div>
 
-				<div class="work__card mix react">
+				<div class="work__card mix pet">
 					<div class="work__card-img">
 						<img src="assets/img/hero.jpg" alt="Work" class="work__img" />
 					</div>
@@ -427,7 +482,7 @@
 					</div>
 				</div>
 
-				<div class="work__card mix react">
+				<div class="work__card mix pet">
 					<div class="work__card-img">
 						<img src="assets/img/work-2.png" alt="Work" class="work__img" />
 					</div>
@@ -441,7 +496,7 @@
 					</div>
 				</div>
 
-				<div class="work__card mix html">
+				<div class="work__card mix pet">
 					<img src="assets/img/e-commerce.png" alt="Work" class="work__img" />
 
 					<h3 class="work__title">#e-Commerce #html5 #customJS</h3>
@@ -451,7 +506,7 @@
 					</a>
 				</div>
 
-				<div class="work__card mix html">
+				<div class="work__card mix commercial">
 					<img src="assets/img/work-3.webp" alt="Work" class="work__img" />
 
 					<h3 class="work__title">#html5 #css3 #multipage</h3>
@@ -461,7 +516,7 @@
 					</a>
 				</div>
 
-				<div class="work__card mix html">
+				<div class="work__card mix pet">
 					<img src="assets/img/work-4.jpg" alt="Work" class="work__img" />
 
 					<h3 class="work__title">#customJS</h3>
@@ -472,7 +527,7 @@
 				</div>
 
 
-				<div class="work__card mix html">
+				<div class="work__card mix pet">
 					<img src="assets/img/hero-slider-1.jpg" alt="Work" class="work__img" />
 
 					<h3 class="work__title">#vite #sass</h3>
@@ -482,7 +537,7 @@
 					</a>
 				</div>
 
-				<div class="work__card mix html">
+				<div class="work__card mix pet">
 					<img src="assets/img/work-6.jpg" alt="Work" class="work__img" />
 
 					<h3 class="work__title">#js #gsap #customAnimation</h3>
@@ -492,7 +547,7 @@
 					</a>
 				</div>
 
-				<div class="work__card mix gulp">
+				<div class="work__card mix pet">
 					<img src="assets/img/work-7.jpg" alt="Work" class="work__img" />
 
 					<h3 class="work__title">#gulp #sass #animation</h3>
@@ -502,7 +557,7 @@
 					</a>
 				</div>
 
-				<div class="work__card mix gulp">
+				<div class="work__card mix pet">
 					<img src="assets/img/work-8.jpg" alt="Work" class="work__img" />
 
 					<h3 class="work__title">#sass #customJS</h3>
@@ -512,7 +567,7 @@
 					</a>
 				</div>
 
-				<div class="work__card mix gulp">
+				<div class="work__card mix commercial">
 					<img src="assets/img/work-9.png" alt="Work" class="work__img" />
 
 					<h3 class="work__title">#gulp #sass</h3>
@@ -522,7 +577,7 @@
 					</a>
 				</div>
 
-				<div class="work__card mix wordpress">
+				<div class="work__card mix commercial">
 					<img src="assets/img/work-10.webp" alt="Work" class="work__img" />
 
 					<h3 class="work__title">#wordpress</h3>
